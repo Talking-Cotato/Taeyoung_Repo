@@ -16,4 +16,5 @@
 ### 개인 문제풀이
 백준 문제집 섹션의 문제 모음 중 하나를 골라서 풀이합니다.
 - 주제: DFS+BFS
+- 기간: 10/27 ~
 - 문제: https://www.acmicpc.net/workbook/view/1983
