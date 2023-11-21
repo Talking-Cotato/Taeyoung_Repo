@@ -1,7 +1,6 @@
 package BOJ;
 
 import java.util.Scanner;
-import java.util.Stack;
 
 public class BOJ_1676 {
     public static void main(String[] args) {
@@ -9,27 +8,20 @@ public class BOJ_1676 {
 
         int N = sc.nextInt();
 
-        Stack<Integer> stack5 = new Stack<>();
-        Stack<Integer> stack2 = new Stack<>();
+        int cnt5 = 0;
+        int cnt2 = 0;
 
         for (int i = N; i > 0; i--) {
             int temp = i;
-            if (temp % 5 == 0) {
-                while (temp % 5 == 0) {
-                    temp = temp / 5;
-                    stack5.add(5);
-                }
+            while (temp % 5 == 0) {
+                temp = temp / 5;
+                cnt5++;
             }
-            if (temp % 2 == 0) {
-                while (temp % 2 == 0) {
-                    temp = temp / 2;
-                    stack2.add(2);
-                }
+            while (temp % 2 == 0) {
+                temp = temp / 2;
+                cnt2++;
             }
         }
-
-        int cnt5 = stack5.toArray().length;
-        int cnt2 = stack2.toArray().length;
 
         System.out.println(Math.min(cnt2, cnt5));
     }
